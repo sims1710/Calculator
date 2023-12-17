@@ -1,0 +1,64 @@
+/* Calculator Styles */
+.calculator-rows {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-display {
+  grid-row: 1;
+  grid-column: span 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  margin-bottom: 8px;
+  overflow-x: hidden;
+}
+
+.calculator-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.square {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.square:active {
+  background-color: #e2e2e2;
+}
+
+.first .square{
+  background-color: #c8c8c8 ;
+}
+
+.square:last-child {
+  background-color: orange;
+}
+
+.square:last-child:active {
+  background-color: #ff8c00;
+}
+
+.square.equal {
+  grid-column: span 2; /* Make it span two columns */
+  background-color:  #FFA756; /* Set the background color to red */
+}
